@@ -1,0 +1,16 @@
+.message-input {
+  max-width: 50vw;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.messages {
+  overflow-y: auto;
+  height: calc(100vh - 130px);
+  position: absolute;
+  bottom: 70px;
+  left: 25vw;
+  right: 25vw;
+}
