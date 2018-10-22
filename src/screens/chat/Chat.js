@@ -3,8 +3,8 @@ import React from 'react';
 import './Chat.css';
 import Message from '../../components/message/Message';
 import Announcment from '../../components/announcment/Announcment';
-import ButtonSecondary from '../../components/form-elements/buttons/ButtonSecondary';
 import ButtonLink from '../../components/form-elements/buttons/ButtonLink';
+import ButtonPrimary from '../../components/form-elements/buttons/ButtonPrimary';
 
 class Chat extends React.Component {
   constructor(props) {
@@ -94,7 +94,7 @@ class Chat extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="CHAT__wrapper">
         <div className="text-center">
           <ButtonLink onClick={this.handleOnLeave.bind(this)}> Leave </ButtonLink>
         </div>
@@ -109,7 +109,7 @@ class Chat extends React.Component {
             className="form-control"
           />
           <div className="input-group-append">
-            <ButtonSecondary onClick={this.handleOnPost.bind(this)}> Post </ButtonSecondary>
+            <ButtonPrimary onClick={this.handleOnPost.bind(this)}> Post </ButtonPrimary>
           </div>
         </div>
       </div>

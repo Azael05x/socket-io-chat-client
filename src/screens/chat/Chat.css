@@ -1,16 +1,25 @@
-.CHAT__message-input {
-  max-width: 50vw;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+.CHAT__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+  height: calc(100vh - 30px);
+}
+
+@media(max-width: 768px) {
+  .CHAT__wrapper {
+    width: 90%;
+  }
 }
 
 .CHAT__messages {
   overflow-y: auto;
-  height: calc(100vh - 130px);
-  position: absolute;
-  bottom: 70px;
-  left: 25vw;
-  right: 25vw;
+  width: 100%;
+  padding: 1em;
+  box-shadow: 0 0 2px #ced4da;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
