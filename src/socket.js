@@ -1,23 +1,27 @@
 import io from 'socket.io-client';
 
 export default class {
-  constructor() {
-    // TODO: Move to const
-    this.socket = io.connect('http://localhost:8081');
+  constructor(onConnection, onConnectionError, onDisconnect) {
+    this.socket = io.connect(process.env.REACT_APP_SOCKET_HOST);
+
     this.socket.on('error', (err) => console.log('received socket error:', err));
+    this.socket.on('connect', () => onConnection());
+    this.socket.on('disconnect', (reason) => onDisconnect(reason));
+    this.socket.on('connect_error', (_error) => onConnectionError());
+    this.socket.on('connect_timeout', (_timeout) => onConnectionError());
   }
 
 
   registerChatHandler(onMessageReceived, onKickedReceived) {
     console.log('registerChatHandler');
     this.socket.on('message', onMessageReceived);
-    this.socket.on('kicked', onKickedReceived);
+    this.socket.on('kick', onKickedReceived);
   }
 
   unregisterChatHandler() {
     console.log('unregisterChatHandler');
     this.socket.off('message');
-    this.socket.off('kicked');
+    this.socket.off('kick');
   }
 
   registerLandingHandler(onSuccess, onFail) {
