@@ -5,7 +5,7 @@ import './Announcment.css';
 
 export default function Announcment(props) {
   return (
-    <div className="announcment">
+    <div className="ANNOUNCMENT__wrapper">
       <p> { props.text } </p>
     </div>
   );

@@ -48,9 +48,9 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="LANDING__wrapper">
         <h1 className="text-center mb-0"> Yet another chat room </h1>
-        <div className="input-group nickname-input mx-auto mt-4">
+        <div className="input-group LANDING__nickname-input mx-auto mt-4">
           <input
             type="text" className="form-control" placeholder="Nickname"
             value={this.state.nickname}

@@ -98,10 +98,10 @@ class Chat extends React.Component {
         <div className="text-center">
           <ButtonLink onClick={this.handleOnLeave.bind(this)}> Leave </ButtonLink>
         </div>
-        <div className="messages" ref={this.chatWindow}>
+        <div className="CHAT__messages" ref={this.chatWindow}>
           { this.renderMessages() }
         </div>
-        <div className="input-group message-input">
+        <div className="input-group CHAT__message-input">
           <input
             value={this.state.input}
             onChange={this.handleInputChange.bind(this)}

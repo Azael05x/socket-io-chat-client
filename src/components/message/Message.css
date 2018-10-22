@@ -1,4 +1,4 @@
-.message {
+.MESSAGE__wrapper {
   background-color: rgba(241, 196, 15, 0.5);
   margin: 20px 70px 20px 0;
   padding: 15px;
@@ -6,12 +6,12 @@
   word-wrap: break-word;
 }
 
-.message.written {
+.MESSAGE__wrapper.MESSAGE__written {
   background-color: rgba(52, 152, 219, 0.5);
   margin: 20px 0 20px 70px;
   border-radius: 20px 20px 5px 20px;
 }
 
-.message p {
+.MESSAGE__wrapper p {
   margin: 0;
 }

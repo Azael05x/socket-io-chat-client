@@ -4,9 +4,9 @@ import './Message.css';
 
 
 export default function Message(props) {
-  const writtenClass = props.written ? 'written' : ''
+  const writtenClass = props.written ? 'MESSAGE__written' : ''
   return (
-    <div className={`message ${writtenClass}`}>
+    <div className={`MESSAGE__wrapper ${writtenClass}`}>
       <p> <b>{ props.author }</b>: { props.text } </p>
     </div>
   );

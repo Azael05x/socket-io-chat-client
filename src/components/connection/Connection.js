@@ -13,6 +13,6 @@ export default function Connection(props) {
   }
 
   return (
-    <span className={`badge-connection badge badge-pill ${badgeClass}`}>{ badgeText }</span>
+    <span className={`CONNECTION__badge-connection badge badge-pill ${badgeClass}`}>{ badgeText }</span>
   );
 }
